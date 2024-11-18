@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 def generate_text(prompt):
     API_URL = "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct"
-    headers = {"Authorization": "Bearer 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"}
+    headers = {"Authorization": "Bearer Your_API_Key"}
     
     payload = {
         "inputs": prompt,
