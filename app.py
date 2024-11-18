@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify
 import requests
 import logging
@@ -6,8 +7,11 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 def generate_text(prompt):
+    # Use environment variable for API token
     API_URL = "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct"
-    headers = {"Authorization": "Bearer Your_API_Key"}
+    API_TOKEN = os.environ.get('HUGGINGFACE_API_TOKEN')
+    
+    headers = {"Authorization": f"Bearer {API_TOKEN}"}
     
     payload = {
         "inputs": prompt,
@@ -63,4 +67,5 @@ Generate an engaging, authentic, and concise dating profile bio based on the abo
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
