@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DinnerTonight - Dating Bio Generator</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍽️ DinnerTonight Bio Generator</h1>
+
+      <form id="bioForm">
+        <div class="form-group">
+          <label for="career">Career</label>
+          <select id="career" required>
+            <option value="">Select a Career</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Artist">Artist</option>
+            <option value="Entrepreneur">Entrepreneur</option>
+            <option value="Chef">Chef</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Musician">Musician</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Designer">Designer</option>
+            <option value="Writer">Writer</option>
+            <option value="Photographer">Photographer</option>
+            <option value="Scientist">Scientist</option>
+            <option value="Lawyer">Lawyer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="traits">Personality Traits (Select multiple)</label>
+          <select id="traits" multiple required>
+            <option value="Adventurous">Adventurous</option>
+            <option value="Creative">Creative</option>
+            <option value="Compassionate">Compassionate</option>
+            <option value="Outgoing">Outgoing</option>
+            <option value="Introverted">Introverted</option>
+            <option value="Ambitious">Ambitious</option>
+            <option value="Humorous">Humorous</option>
+            <option value="Analytical">Analytical</option>
+            <option value="Spontaneous">Spontaneous</option>
+            <option value="Intellectual">Intellectual</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="interests">Interests (Select multiple)</label>
+          <select id="interests" multiple required>
+            <option value="Cooking">Cooking</option>
+            <option value="Traveling">Traveling</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Music">Music</option>
+            <option value="Literature">Literature</option>
+            <option value="Technology">Technology</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Photography">Photography</option>
+            <option value="Art">Art</option>
+            <option value="Hiking">Hiking</option>
+            <option value="Dancing">Dancing</option>
+            <option value="Meditation">Meditation</option>
+            <option value="Podcasts">Podcasts</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="relationship-goals">Relationship Goals</label>
+          <select id="relationship-goals" required>
+            <option value="">Select Relationship Goal</option>
+            <option value="Casual">Casual</option>
+            <option value="Long-term">Long-term</option>
+            <option value="Adventurous">Adventurous Connection</option>
+            <option value="Deep Connection">Seeking Deep Connection</option>
+            <option value="Friendship">Friendship First</option>
+            <option value="Marriage">Looking for Marriage</option>
+            <option value="Travel Partner">Travel Partner</option>
+          </select>
+        </div>
+
+        <button type="submit">Generate My Bio</button>
+      </form>
+
+      <div class="result-container">
+        <h2>Generated Bio:</h2>
+        <div id="result" class="result"></div>
+      </div>
+    </div>
+
+    <script src="static/scripts.js"></script>
+  </body>
+</html>
